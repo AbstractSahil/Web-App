@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Progress Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* Make the body full height */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 280px;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-buttons a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+            /* Add margin below the heading */
+        }
+
+        .graphs {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .graph {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin: 0 20px;
+            /* Adjust the spacing between graphs */
+            padding: 10px;
+            border-radius: 8px;
+            /* Add border radius for a rounded appearance */
+            background-color: #fff;
+            /* Add a white background for the graphs */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow for depth */
+        }
+
+        .bar-line-container {
+            position: center;
+            width: 80%;
+            /* Adjust this width as needed */
+            margin: 30px auto;
+            /* Adjust the spacing above and below the bar line */
+        }
+
+        .bar-line {
+            position: center;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            /* Start with zero width */
+            height: 20px;
+            background-color: #4CAF50;
+            transition: width 0.5s ease-in-out;
+            /* Add transition for smooth effect */
+            border-radius: 0 0 8px 8px;
+            /* Rounded bottom corners */
+        }
+
+        .percentage {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #666;
+            text-align: center;
+            
+            /* Set a dark color for the percentage text */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>SMARTrack</h1>
+        </div>
+        <div class="nav-buttons">
+            <a href="home.html">Home</a>
+            <a href="#">Product</a>
+            <a href="#">About us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Contact us</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Track your daily progress</h1>
+        <div class="graphs">
+            <div class="graph">
+                <!-- Your graph content goes here -->
+                Graph 1
+                <div class="bar"></div>
+                <div class="percentage">50%</div>
+            </div>
+            <div class="graph">
+                <!-- Your graph content goes here -->
+                Graph 2
+                <div class="bar"></div>
+
+                <div class="percentage">75%</div>
+            </div>
+            <!-- Add more graphs here if needed -->
+        </div>
+        <div class="bar-line-container">
+            <div class="bar-line" id="barLine"></div>
+        </div>
+        <div class="percentage" id="percentageText">0% complete</div>
+    </div>
+
+    <script>
+        // JavaScript to update the width of the bar line and the percentage text
+        const barLine = document.getElementById('barLine');
+        const percentageText = document.getElementById('percentageText');
+
+        function updateProgressBar(percentage) {
+            barLine.style.width = percentage + '%';
+            percentageText.textContent = percentage + '% complete';
+        }
+
+        // Example usage: Update the progress to 75%
+        updateProgressBar(50);
+    </script>
+
+</body>
+
+</html>
