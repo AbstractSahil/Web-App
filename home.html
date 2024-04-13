@@ -12,7 +12,6 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            /* Make the body full height */
         }
 
         header {
@@ -57,7 +56,6 @@
             margin-bottom: 20px;
             text-align: center;
             color: white;
-            /* Add margin below the heading */
         }
 
         .graphs {
@@ -71,22 +69,16 @@
             height: 200px;
             border: 1px solid #ccc;
             margin: 0 20px;
-            /* Adjust the spacing between graphs */
             padding: 10px;
             border-radius: 8px;
-            /* Add border radius for a rounded appearance */
             background-color: #fff;
-            /* Add a white background for the graphs */
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            /* Add a subtle shadow for depth */
         }
 
         .bar-line-container {
             position: center;
             width: 80%;
-            /* Adjust this width as needed */
             margin: 30px auto;
-            /* Adjust the spacing above and below the bar line */
         }
 
         .bar-line {
@@ -94,13 +86,10 @@
             bottom: 0;
             left: 0;
             width: 0;
-            /* Start with zero width */
             height: 20px;
             background-color: #4CAF50;
             transition: width 0.5s ease-in-out;
-            /* Add transition for smooth effect */
             border-radius: 0 0 8px 8px;
-            /* Rounded bottom corners */
         }
 
         .percentage {
@@ -109,7 +98,6 @@
             color: #666;
             text-align: center;
             
-            /* Set a dark color for the percentage text */
         }
     </style>
 </head>
@@ -132,19 +120,16 @@
         <h1>Track your daily progress</h1>
         <div class="graphs">
             <div class="graph">
-                <!-- Your graph content goes here -->
                 Graph 1
                 <div class="bar"></div>
                 <div class="percentage">50%</div>
             </div>
             <div class="graph">
-                <!-- Your graph content goes here -->
                 Graph 2
                 <div class="bar"></div>
 
                 <div class="percentage">75%</div>
             </div>
-            <!-- Add more graphs here if needed -->
         </div>
         <div class="bar-line-container">
             <div class="bar-line" id="barLine"></div>
@@ -153,7 +138,6 @@
     </div>
 
     <script>
-        // JavaScript to update the width of the bar line and the percentage text
         const barLine = document.getElementById('barLine');
         const percentageText = document.getElementById('percentageText');
 
@@ -162,7 +146,6 @@
             percentageText.textContent = percentage + '% complete';
         }
 
-        // Example usage: Update the progress to 75%
         updateProgressBar(50);
     </script>
 
